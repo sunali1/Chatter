@@ -7,7 +7,7 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 # Add additional requires below this line. Rails is not loaded until this point!
 require 'capybara/poltergeist'
-require 'factory_girl_rails'
+require 'factory_bot_rails'
 require 'capybara/rspec'
 
 
@@ -37,7 +37,7 @@ RSpec.configure do |config|
   # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
   config.fixture_path = "#{::Rails.root}/spec/fixtures"
   config.include Devise::Test::IntegrationHelpers, type: :feature
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
   config.raise_errors_for_deprecations!
 
   # If you're not using ActiveRecord, or you'd prefer not to run each of your
