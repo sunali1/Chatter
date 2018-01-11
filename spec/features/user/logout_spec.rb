@@ -1,12 +1,14 @@
-# require 'rails_helper'
-#
-# RSpec.feature "Logout", :type => :feature do
-#
-#   let(:user) { create(:user) }
-#
-#   scenario "user successfully logs out" do
-#     sign_in
-#     find('nav #user-settings', text: "Settings").click
-#     find('nav a', text: "Logout").click
-#   end
-# end
+require 'rails_helper'
+
+RSpec.feature "Logout", :type => :feature do
+
+  let(:user) { create(:user) }
+
+  scenario "user successfully logs out" do
+    sign_in user
+    visit root_path
+    find('nav #user-settings').click
+    find('nav a', :match => :first, text: "Log out", ).click
+    expect(page).to have_selector('nav a', text: 'Login')
+  end
+end
