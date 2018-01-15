@@ -1,24 +1,17 @@
 # README
+This is a Ruby on Rails app is a work-in-progress to refamiliarise and consolidate.
+Testing
+  Framework: RSpec
+  Sample-data: FactoryBot
+  Acceptance tests: Capybara using
+                    Poltergeist for Javascript
+  Tests are for all the logic written by me.                  
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+It’s going to be a platform where you could search and meet like-minded people.
+Main functionalities which the app will have:
+  Authentication (with Devise)
+  Ability to publish posts, and search and categorize them
+  Instant messaging (popup windows and a separate messenger), with the ability to create private and group conversations.
+  Ability to add users to contacts
+  Real time notifications
